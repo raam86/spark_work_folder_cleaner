@@ -1,0 +1,4 @@
+#!/bin/bash
+for i in $( cat spark-1.4.1-bin-custom-spark/conf/slaves ); do 
+ssh ubuntu@$i 'bash -s' < delete_old_work_files 
+done

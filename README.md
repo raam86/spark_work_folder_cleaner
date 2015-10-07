@@ -1,0 +1,13 @@
+#SPARK WORKERS WORK FOLDER CLEANER
+
+spark standalone cluster doesn't clear the older works of running application. 
+Since spark streaming rarely stops this bash script will clean the work folder from the master to all of your slaves. 
+
+
+### How to use
+
+1)pull the repo
+2)add the cron line with the correct path 
+3)profit 
+
+

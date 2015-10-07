@@ -1,0 +1,11 @@
+#!/bin/bash
+find /home/ubuntu/spark-1.4.1-bin-custom-spark/work  -cmin +60  -type d > work-files-to-delete
+FILE_COUNT=`cat work-files-to-delete | wc -l`
+if [[ "$FILE_COUNT" -gt 0 ]]; 
+then
+echo "deleting $FILE_COUNT"
+cat work-files-to-delete | xargs -i rm -rf {}
+else
+ echo "no files to delete"
+fi
+rm work-files-to-delete
